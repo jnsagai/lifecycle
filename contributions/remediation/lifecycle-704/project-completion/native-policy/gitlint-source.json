@@ -1,0 +1,7 @@
+{
+  "repository": "eclipse-score/score",
+  "commit": "f42e760912e5f99e0db993de717155cc85679f6c",
+  "path": ".gitlint",
+  "required_by": ".github/actions/gitlint/action.yml",
+  "tool_version": "0.19.1"
+}

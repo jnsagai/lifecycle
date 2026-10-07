@@ -1,0 +1,8 @@
+{
+  "repository": "eclipse-score/cicd-workflows",
+  "native_reference": "on-pr/v0.0.0",
+  "resolved_commit": "88cb460c47cb49efeb25cd7b73c8945dd1c5bce2",
+  "path": ".github/workflows/on-pr.yml",
+  "sha256": "152113bf4ad4ef829cd90be405aa59e697ef42a92775ee093d8e774b5e1fe35d",
+  "observed_at": "2026-10-07T14:42:42.151052+00:00"
+}

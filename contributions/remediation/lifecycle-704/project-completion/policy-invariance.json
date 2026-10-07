@@ -1,0 +1,138 @@
+{
+  "baseline": "f603fe7327b642574332df02a66dd420bd133aea",
+  "files": {
+    ".bazelrc": {
+      "baseline_sha256": "4810f663106303c9fde5469bd35150358576bc283535ee922340cbbeb0370bec",
+      "captured_sha256": "4810f663106303c9fde5469bd35150358576bc283535ee922340cbbeb0370bec",
+      "candidate_sha256": "4810f663106303c9fde5469bd35150358576bc283535ee922340cbbeb0370bec",
+      "unchanged": true
+    },
+    ".bazelversion": {
+      "baseline_sha256": "331890b9bae605c036309f3f56e1cfca916aff3dfd61aebe50370d4bfa125c78",
+      "captured_sha256": "331890b9bae605c036309f3f56e1cfca916aff3dfd61aebe50370d4bfa125c78",
+      "candidate_sha256": "331890b9bae605c036309f3f56e1cfca916aff3dfd61aebe50370d4bfa125c78",
+      "unchanged": true
+    },
+    ".github/CODEOWNERS": {
+      "baseline_sha256": "c59dcc967da0981f2aa81680745c858e36b44e24451f967b575e88a96e46843a",
+      "captured_sha256": "c59dcc967da0981f2aa81680745c858e36b44e24451f967b575e88a96e46843a",
+      "candidate_sha256": "c59dcc967da0981f2aa81680745c858e36b44e24451f967b575e88a96e46843a",
+      "unchanged": true
+    },
+    ".github/PULL_REQUEST_TEMPLATE/bug_fix.md": {
+      "baseline_sha256": "dda3c6d677385a4cf013b5b33af538b60e5291cf4a404ea2f577d8f9c39a18ee",
+      "captured_sha256": "dda3c6d677385a4cf013b5b33af538b60e5291cf4a404ea2f577d8f9c39a18ee",
+      "candidate_sha256": "dda3c6d677385a4cf013b5b33af538b60e5291cf4a404ea2f577d8f9c39a18ee",
+      "unchanged": true
+    },
+    ".github/PULL_REQUEST_TEMPLATE/improvement.md": {
+      "baseline_sha256": "0d965e367628a4b525008e9048d1a7b99fee35c51d7e0f16305065094cbb3f4f",
+      "captured_sha256": "0d965e367628a4b525008e9048d1a7b99fee35c51d7e0f16305065094cbb3f4f",
+      "candidate_sha256": "0d965e367628a4b525008e9048d1a7b99fee35c51d7e0f16305065094cbb3f4f",
+      "unchanged": true
+    },
+    ".github/actions/gitlint/action.yml": {
+      "baseline_sha256": "27195eae9043b7e89ef2175d74e4b4eba83557c9fcbe388abe6f121e18bf1def",
+      "captured_sha256": "27195eae9043b7e89ef2175d74e4b4eba83557c9fcbe388abe6f121e18bf1def",
+      "candidate_sha256": "27195eae9043b7e89ef2175d74e4b4eba83557c9fcbe388abe6f121e18bf1def",
+      "unchanged": true
+    },
+    ".github/workflows/_codeql.yml": {
+      "baseline_sha256": "7f795d4565bc6c419314aef93a4b6b6310c03136daed4191ff8d7ac493e33fbc",
+      "captured_sha256": "7f795d4565bc6c419314aef93a4b6b6310c03136daed4191ff8d7ac493e33fbc",
+      "candidate_sha256": "7f795d4565bc6c419314aef93a4b6b6310c03136daed4191ff8d7ac493e33fbc",
+      "unchanged": true
+    },
+    ".github/workflows/code_coverage.yml": {
+      "baseline_sha256": "c01f79f11562d1b1a55800e8a8c32441e80e04be0d1a23fa7c3add0ccabeef4e",
+      "captured_sha256": "c01f79f11562d1b1a55800e8a8c32441e80e04be0d1a23fa7c3add0ccabeef4e",
+      "candidate_sha256": "c01f79f11562d1b1a55800e8a8c32441e80e04be0d1a23fa7c3add0ccabeef4e",
+      "unchanged": true
+    },
+    ".github/workflows/daily.yml": {
+      "baseline_sha256": "0b29c69c52d1ea41b6044c1a0e438da639f2a1134d4b4483ef64f80633e600ee",
+      "captured_sha256": "0b29c69c52d1ea41b6044c1a0e438da639f2a1134d4b4483ef64f80633e600ee",
+      "candidate_sha256": "0b29c69c52d1ea41b6044c1a0e438da639f2a1134d4b4483ef64f80633e600ee",
+      "unchanged": true
+    },
+    ".github/workflows/docs.yml": {
+      "baseline_sha256": "c731afad486393f2b977cba1a66cd3f23d896dd886030d1bfd6e09dd6a0b4f14",
+      "captured_sha256": "c731afad486393f2b977cba1a66cd3f23d896dd886030d1bfd6e09dd6a0b4f14",
+      "candidate_sha256": "c731afad486393f2b977cba1a66cd3f23d896dd886030d1bfd6e09dd6a0b4f14",
+      "unchanged": true
+    },
+    ".github/workflows/on-pr-target.yml": {
+      "baseline_sha256": "3cdfda608bca2ea66de180a9a2861b3f00c915165fb64c78d07e03b71cf2e0ae",
+      "captured_sha256": "3cdfda608bca2ea66de180a9a2861b3f00c915165fb64c78d07e03b71cf2e0ae",
+      "candidate_sha256": "3cdfda608bca2ea66de180a9a2861b3f00c915165fb64c78d07e03b71cf2e0ae",
+      "unchanged": true
+    },
+    ".github/workflows/on-pr.yml": {
+      "baseline_sha256": "ce975d1863300521926a2fb5eff3972e52354fb82d315eb967066eb4213cb5ae",
+      "captured_sha256": "ce975d1863300521926a2fb5eff3972e52354fb82d315eb967066eb4213cb5ae",
+      "candidate_sha256": "ce975d1863300521926a2fb5eff3972e52354fb82d315eb967066eb4213cb5ae",
+      "unchanged": true
+    },
+    ".github/workflows/release.yml": {
+      "baseline_sha256": "74c34b86650227250461a9a8e9d4acde9bc56b6f9a2f045c87774238f13b0eee",
+      "captured_sha256": "74c34b86650227250461a9a8e9d4acde9bc56b6f9a2f045c87774238f13b0eee",
+      "candidate_sha256": "74c34b86650227250461a9a8e9d4acde9bc56b6f9a2f045c87774238f13b0eee",
+      "unchanged": true
+    },
+    ".pre-commit-config.yaml": {
+      "baseline_sha256": "6a2423ab827351dda972b0682a60226c935bef7fae0a4846e16804a1c5d2ff96",
+      "captured_sha256": "6a2423ab827351dda972b0682a60226c935bef7fae0a4846e16804a1c5d2ff96",
+      "candidate_sha256": "6a2423ab827351dda972b0682a60226c935bef7fae0a4846e16804a1c5d2ff96",
+      "unchanged": true
+    },
+    "BUILD": {
+      "baseline_sha256": "2b8333dc236e7f4a812ce85874be67d68fa8b22f55afd014da19e4010fdfba68",
+      "captured_sha256": "2b8333dc236e7f4a812ce85874be67d68fa8b22f55afd014da19e4010fdfba68",
+      "candidate_sha256": "2b8333dc236e7f4a812ce85874be67d68fa8b22f55afd014da19e4010fdfba68",
+      "unchanged": true
+    },
+    "CONTRIBUTION.md": {
+      "baseline_sha256": "41b5ba5a82f336d1ff5170c52919c20e5f68302e548142a5db31c6d19e866c70",
+      "captured_sha256": "41b5ba5a82f336d1ff5170c52919c20e5f68302e548142a5db31c6d19e866c70",
+      "candidate_sha256": "41b5ba5a82f336d1ff5170c52919c20e5f68302e548142a5db31c6d19e866c70",
+      "unchanged": true
+    },
+    "LICENSE": {
+      "baseline_sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+      "captured_sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+      "candidate_sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+      "unchanged": true
+    },
+    "MODULE.bazel": {
+      "baseline_sha256": "97e2d6c2c893460ab0eed9f819f1766a6df6b5b6e231026e702b10b2058b439a",
+      "captured_sha256": "97e2d6c2c893460ab0eed9f819f1766a6df6b5b6e231026e702b10b2058b439a",
+      "candidate_sha256": "97e2d6c2c893460ab0eed9f819f1766a6df6b5b6e231026e702b10b2058b439a",
+      "unchanged": true
+    },
+    "MODULE.bazel.lock": {
+      "baseline_sha256": "71737e79a306f9b734c08338b2c22723b6c33c7b3a8b6fa2a53f4f96e105a0db",
+      "captured_sha256": "71737e79a306f9b734c08338b2c22723b6c33c7b3a8b6fa2a53f4f96e105a0db",
+      "candidate_sha256": "71737e79a306f9b734c08338b2c22723b6c33c7b3a8b6fa2a53f4f96e105a0db",
+      "unchanged": true
+    },
+    "NOTICE": {
+      "baseline_sha256": "32803fc594989782008a20d853b634f5e4bd47afeb15aaf898f521481e33b177",
+      "captured_sha256": "32803fc594989782008a20d853b634f5e4bd47afeb15aaf898f521481e33b177",
+      "candidate_sha256": "32803fc594989782008a20d853b634f5e4bd47afeb15aaf898f521481e33b177",
+      "unchanged": true
+    },
+    "docs/features/lifecycle/architecture/index.rst": {
+      "baseline_sha256": "8bd9c0053f06a1f30de382c27e07f1ad7ae988e25cc526b2d4e4a183bbc90a98",
+      "captured_sha256": "8bd9c0053f06a1f30de382c27e07f1ad7ae988e25cc526b2d4e4a183bbc90a98",
+      "candidate_sha256": "8bd9c0053f06a1f30de382c27e07f1ad7ae988e25cc526b2d4e4a183bbc90a98",
+      "unchanged": true
+    },
+    "project_config.bzl": {
+      "baseline_sha256": "b126f986c959f50338a44c8735f7d8e192ecd16fa2e2aaa4535879af31a4f8cc",
+      "captured_sha256": "b126f986c959f50338a44c8735f7d8e192ecd16fa2e2aaa4535879af31a4f8cc",
+      "candidate_sha256": "b126f986c959f50338a44c8735f7d8e192ecd16fa2e2aaa4535879af31a4f8cc",
+      "unchanged": true
+    }
+  },
+  "scope": "Captured native policy bytes equal Git baseline and current candidate; external SCORE Gitlint and shared-common workflow provenance recorded separately"
+}

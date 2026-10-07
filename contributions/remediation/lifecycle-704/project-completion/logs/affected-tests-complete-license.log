@@ -1,0 +1,39 @@
+$TEST_TMPDIR defined, some defaults will be overridden
+Starting local Bazel server (8.7.0) and connecting to it...
+Computing main repo mapping: 
+Computing main repo mapping: 
+WARNING: For repository 'score_tooling', the root module requires module version score_tooling@2.2.1, but got score_tooling@2.2.2 in the resolved dependency graph. Please update the version in your MODULE.bazel or set --check_direct_dependencies=off
+Computing main repo mapping: 
+Loading: 
+Loading: 3 packages loaded
+Analyzing: 5 targets (12 packages loaded, 10 targets configured)
+Analyzing: 5 targets (12 packages loaded, 11 targets configured)
+
+Analyzing: 5 targets (110 packages loaded, 160 targets configured)
+
+Analyzing: 5 targets (190 packages loaded, 6491 targets configured)
+
+Analyzing: 5 targets (308 packages loaded, 14334 targets configured)
+
+WARNING: /media/jefferson/11c42dee-73a3-4c2b-ab42-a0440011d9e0/.s-core-build/runs/score-lifecycle704-compliance-1sd3cb6p/cache/bazel-user/ed4001af69943c1733f9bbc72381c63b/external/score_baselibs+/score/mw/log/detail/text_recorder/BUILD:23:11: in cc_library rule @@score_baselibs+//score/mw/log/detail/text_recorder:text_recorder: target '@@score_baselibs+//score/mw/log/detail/text_recorder:text_recorder' depends on deprecated target '@@score_baselibs+//score/os/utils:high_resolution_steady_clock': Deprecated, please use //platform/aas/mw/time/HighPrecisionLocalSteadyClock instead
+Analyzing: 5 targets (421 packages loaded, 26661 targets configured)
+
+INFO: Analyzed 5 targets (430 packages loaded, 27561 targets configured).
+[12 / 1,379] checking cached actions
+[320 / 2,273] [Prepa] Testing //scripts/config_mapping/tests:lifecycle_config_tests
+[861 / 2,273] Testing //scripts/config_mapping/tests:lifecycle_config_tests; 1s linux-sandbox
+[2,184 / 2,273] 1 / 5 tests; Testing //scripts/config_mapping/tests:lifecycle_config_tests; 4s linux-sandbox
+[2,275 / 2,277] 3 / 5 tests; [Sched] Testing //tests/integration/switch_run_target:switch_run_target ... (2 actions, 1 running)
+[2,276 / 2,277] 5 / 5 tests; Testing //tests/integration/switch_run_target:switch_run_target; 1s linux-sandbox
+INFO: Found 5 test targets...
+INFO: Elapsed time: 25.773s, Critical Path: 4.95s
+INFO: 6 processes: 2279 action cache hit, 1 internal, 5 linux-sandbox.
+INFO: Build completed successfully, 6 total actions
+//score/launch_manager/src/daemon/src/control:control_provider_UT        PASSED in 0.3s
+//score/launch_manager/src/lm_control:ilm_control_UT                     PASSED in 0.3s
+//score/launch_manager/src/lm_control:lm_control_impl_UT                 PASSED in 0.2s
+//scripts/config_mapping/tests:lifecycle_config_tests                    PASSED in 3.7s
+//tests/integration/switch_run_target:switch_run_target                  PASSED in 1.6s
+
+Executed 5 out of 5 tests: 5 tests pass.
+There were tests whose specified size is too big. Use the --test_verbose_timeout_warnings command line option to see which ones these are.

@@ -1,0 +1,21 @@
+{
+  "baseline": "f603fe7327b642574332df02a66dd420bd133aea",
+  "patch_sha256": "3cc9ced41cd32678d8e0cdd433881aaf7a8bc0329b2d3153e940cb51a80e4626",
+  "native_cases_passed": 125,
+  "native_targets_passed": 5,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "configuration_profiles_equal": 3,
+  "unit_runfiles_equal": 2,
+  "integration_package_equal": true,
+  "notice_only_change": false,
+  "human_review": "Pending for this exact revision",
+  "scope": "Current-head affected x86_64 Linux host tests, configuration/runfile/package comparisons and recorded contribution hooks; full native CI/QNX remain pending",
+  "buildifier_exit_code": 0,
+  "gitlint_exit_code": 0,
+  "notice_and_license_only_amendment": true,
+  "pre_commit_scoped_exit_code": 0,
+  "pre_commit_exit_code": 0,
+  "native_policy_unchanged": true
+}

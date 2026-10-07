@@ -1,0 +1,25 @@
+{
+  "argv": [
+    "/media/jefferson/11c42dee-73a3-4c2b-ab42-a0440011d9e0/.s-core-build/runs/score-lifecycle704-compliance-1sd3cb6p/native/.llm_tmp/bin/bazel",
+    "test",
+    "--config=x86_64-linux",
+    "--config=host",
+    "--lockfile_mode=error",
+    "--local_test_jobs=1",
+    "--sandbox_default_allow_network=false",
+    "--nocache_test_results",
+    "//score/launch_manager/src/daemon/src/control:control_provider_UT",
+    "//score/launch_manager/src/lm_control:ilm_control_UT",
+    "//score/launch_manager/src/lm_control:lm_control_impl_UT",
+    "//scripts/config_mapping/tests:lifecycle_config_tests",
+    "//tests/integration/switch_run_target:switch_run_target"
+  ],
+  "cwd": "/media/jefferson/11c42dee-73a3-4c2b-ab42-a0440011d9e0/.s-core-build/runs/score-lifecycle704-compliance-1sd3cb6p/native",
+  "exit_code": 0,
+  "elapsed_seconds": 191.1665940284729,
+  "started_at_utc_epoch": 1791382651.034838,
+  "baseline": "f603fe7327b642574332df02a66dd420bd133aea",
+  "candidate_diff_sha256_before": "6a309c03d4e81ce1e90ee3a45884c676e8dde60878d7f3c573a40fe436389845",
+  "candidate_diff_sha256_after": "6a309c03d4e81ce1e90ee3a45884c676e8dde60878d7f3c573a40fe436389845",
+  "log_sha256": "295e1eb0ac3221ec7b83dc4b2f11ba30ae1bcd7f16947d823be36f39b1c0b915"
+}

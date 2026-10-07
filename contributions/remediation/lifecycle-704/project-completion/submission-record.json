@@ -1,0 +1,21 @@
+{
+  "observed_at_utc": "2026-10-07T14:28:37.988970+00:00",
+  "baseline": "f603fe7327b642574332df02a66dd420bd133aea",
+  "issue_state": "open",
+  "issue_updated_at": "2026-09-28T11:18:57Z",
+  "patch_sha256": "3cc9ced41cd32678d8e0cdd433881aaf7a8bc0329b2d3153e940cb51a80e4626",
+  "changed_paths": [
+    "LICENSES/CC0-1.0.txt",
+    "config/mw_com_config.bzl",
+    "score/launch_manager/src/daemon/src/control/BUILD",
+    "score/launch_manager/src/daemon/src/control/control_provider_test_mw_com_config.json",
+    "score/launch_manager/src/lm_control/BUILD",
+    "score/launch_manager/src/lm_control/src/details/test_lmcontrol_mw_com_config.json",
+    "tests/utils/environments/BUILD",
+    "tests/utils/environments/mw_com_config.json"
+  ],
+  "author_dco": "Awaiting personal confirmation",
+  "native_pr_url": null,
+  "native_pr_head": null,
+  "publication_performed": false
+}

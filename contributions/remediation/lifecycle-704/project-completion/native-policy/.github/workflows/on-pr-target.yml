@@ -1,0 +1,54 @@
+# *******************************************************************************
+# Copyright (c) 2025 Contributors to the Eclipse Foundation
+#
+# See the NOTICE file(s) distributed with this work for additional
+# information regarding copyright ownership.
+#
+# This program and the accompanying materials are made available under the
+# terms of the Apache License Version 2.0 which is available at
+# https://www.apache.org/licenses/LICENSE-2.0
+#
+# SPDX-License-Identifier: Apache-2.0
+# *******************************************************************************
+
+# Note: Checks here are difficult to modify, because they always use the definition
+# from the main branch. Prefer using on-pr.yml if at all possible.
+
+name: PR Target
+
+on:
+  pull_request_target:
+    types: [opened, reopened, synchronize]
+  merge_group:
+    types: [checks_requested]
+  push:
+    branches:
+      - main
+  workflow_call:
+
+permissions:
+  pull-requests: write
+  issues: write
+
+jobs:
+  qnx-build:
+    name: Build and test ${{ matrix.bazel-config }}
+    strategy:
+      fail-fast: false
+      matrix:
+        bazel-config: [unit-tests-x86_64-qnx, unit-tests-arm64-qnx, x86_64-qnx, arm64-qnx]
+    uses: eclipse-score/cicd-workflows/.github/workflows/qnx-build.yml@d2083d5dac0e309643d9f495e61342dfbaf07ed5
+    permissions:
+      contents: read
+      pull-requests: read
+    with:
+      bazel-target: "//score/... //examples/..."
+      bazel-config: ${{ matrix.bazel-config }}
+      bazel-test-target: "//examples/... //score/... //tests/..."
+      extra-bazel-test-flags: "--test_timeout=120,600,1800,7200" # Increase test timeout due to QEMU emulation
+      credential-helper: "scripts/internal/qnx_creds.py"
+      bazel-disk-cache: ${{ matrix.bazel-config }}
+    secrets:
+      score-qnx-license: ${{ secrets.SCORE_QNX_LICENSE }}
+      score-qnx-user: ${{ secrets.SCORE_QNX_USER }}
+      score-qnx-password: ${{ secrets.SCORE_QNX_PASSWORD }}

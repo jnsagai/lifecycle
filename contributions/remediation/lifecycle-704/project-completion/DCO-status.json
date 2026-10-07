@@ -1,0 +1,11 @@
+{
+  "status": "Author confirmation pending; no sign-off attached",
+  "proposed_author": {
+    "legal_name": "Jefferson Nascimento",
+    "email": "jnsagai@gmail.com",
+    "eclipse_username": "jnascimento6p0"
+  },
+  "subject_patch_sha256": "3cc9ced41cd32678d8e0cdd433881aaf7a8bc0329b2d3153e940cb51a80e4626",
+  "native_baseline": "f603fe7327b642574332df02a66dd420bd133aea",
+  "signed_off_by": null
+}

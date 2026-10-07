@@ -1,0 +1,25 @@
+{
+  "observed_at": "2026-10-07T14:44:44.277243+00:00",
+  "observations": [
+    {
+      "url": "https://eclipse-score.github.io/score/process_description/guidelines/index.html",
+      "http_status": 404,
+      "final_url": "https://eclipse-score.github.io/score/process_description/guidelines/index.html"
+    },
+    {
+      "url": "https://eclipse-score.github.io/score/process_description/",
+      "http_status": 404,
+      "final_url": "https://eclipse-score.github.io/score/process_description/"
+    },
+    {
+      "url": "https://www.eclipse.org/projects/handbook/",
+      "http_status": 200,
+      "final_url": "https://www.eclipse.org/projects/handbook/"
+    }
+  ],
+  "commit_guidance": {
+    "source": "https://www.eclipse.org/projects/handbook/#resources-commit",
+    "assessment": "Use actual legal author name and account-matching email, valid Eclipse contribution agreement coverage, summary/description/footer commit structure. Captured native Gitlint policy adds executable checks. Final author certification and submitted-commit eligibility remain pending."
+  },
+  "project_process": "Captured native contribution guide, architecture context and current workflows used. Linked generated process pages did not yield accessible contents; no unavailable template or rule is invented."
+}

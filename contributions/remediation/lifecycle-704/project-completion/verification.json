@@ -1,0 +1,21 @@
+{
+  "observed_at": "2026-10-07T14:50:51.624946+00:00",
+  "scope": "Lifecycle current contribution packet and its retained original evidence only",
+  "historical_manifest_entries": 296,
+  "historical_patch_files": 1,
+  "current_packet_manifest_entries": 106,
+  "current_ready_for_official_merge": false,
+  "offline_packet_check": {
+    "packet_files_verified": 106,
+    "candidate_files_verified": 5,
+    "deleted_paths_verified": 3,
+    "clean_application": true,
+    "original_implementation_body_preserved": true,
+    "scope": "Retained bytes and clean patch application; no native execution or human acceptance"
+  },
+  "private_bazel_shutdown": {
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "$TEST_TMPDIR defined, some defaults will be overridden\n"
+  }
+}

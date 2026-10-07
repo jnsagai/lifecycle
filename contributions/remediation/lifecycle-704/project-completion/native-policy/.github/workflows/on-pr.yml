@@ -1,0 +1,193 @@
+# *******************************************************************************
+# Copyright (c) 2025 Contributors to the Eclipse Foundation
+#
+# See the NOTICE file(s) distributed with this work for additional
+# information regarding copyright ownership.
+#
+# This program and the accompanying materials are made available under the
+# terms of the Apache License Version 2.0 which is available at
+# https://www.apache.org/licenses/LICENSE-2.0
+#
+# SPDX-License-Identifier: Apache-2.0
+# *******************************************************************************
+name: PR
+
+on:
+  pull_request:
+    types: [opened, reopened, synchronize]
+  merge_group:
+    types: [checks_requested]
+  push:
+    branches:
+      - main
+    # Publishing a draft release creates the tag.
+    tags:
+      - "v*"
+  workflow_call:
+
+jobs:
+  common:
+    name: Common checks
+    permissions:
+      contents: read
+    uses: eclipse-score/cicd-workflows/.github/workflows/on-pr.yml@on-pr/v0.0.0
+
+  # We don't use eclipse-score/cicd-workflows/.github/workflows/tests.yml
+  # because it is more resource efficient to build and test in the same job.
+  # Also the cache name in the template is not configurable.
+  build:
+    name: Build and test ${{ matrix.name }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - name: x86_64-linux
+            bazel-args: --config=x86_64-linux
+            build: true
+            test: true
+          - name: arm64-linux
+            bazel-args: --config=arm64-linux
+            build: true
+            test: false # Cannot run on x86_64
+          - name: asan_ubsan_lsan
+            bazel-args: --config=x86_64-linux --config=asan_ubsan_lsan
+            build: false # https://github.com/eclipse-score/lifecycle/issues/476
+            test: true
+          - name: tsan
+            bazel-args: --config=x86_64-linux --config=tsan
+            build: false # https://github.com/eclipse-score/lifecycle/issues/474
+            test: true
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v7
+
+      - name: Setup Bazel with shared caching
+        uses: eclipse-score/cicd-actions/setup-bazel-cache@e2a2a587a759b681632040ec1e1294015a0405f5 # setup-bazel-cache/v0.1.0
+        with:
+          disk-cache-key: ${{ github.job }}-${{ matrix.name }}
+
+      - name: Build with Bazel
+        if: matrix.build
+        run: |
+          bazel build \
+            --lockfile_mode=error \
+            ${{ matrix.bazel-args }} \
+            //examples/... \
+            //score/...
+
+      - name: Test with Bazel
+        if: matrix.test
+        run: |
+          bazel test \
+            --lockfile_mode=error \
+            ${{ matrix.bazel-args }} \
+            //...
+
+      - name: Upload test logs
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: bazel-testlogs-${{ matrix.name }}
+          path: bazel-testlogs/
+          retention-days: 7
+
+  clippy:
+    name: Clippy
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - name: Cache Cargo registry, git deps & target
+        uses: actions/cache@v6
+        with:
+          path: |
+            ~/.cargo/registry
+            ~/.cargo/git
+            target
+          key: ${{ runner.os }}-cargo-lint-clippy-${{ hashFiles('**/Cargo.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-cargo-lint-clippy-
+
+      - name: Install Rust toolchain
+        uses: actions-rs/toolchain@v1
+        with:
+          profile: minimal
+          toolchain: 1.90.0
+          override: true
+          components: clippy
+
+      - name: check clippy errors
+        uses: actions-rs/cargo@v1
+        with:
+          command: clippy
+          args: --all-features --all-targets --workspace -- -D warnings
+
+  coverage:
+    name: Coverage
+    uses: ./.github/workflows/code_coverage.yml
+    permissions:
+      contents: read
+
+  docs-check:
+    name: Check documentation
+    uses: eclipse-score/cicd-workflows/.github/workflows/docs-verify.yml@8d80e8df150cae21d53cbc8031d0f970648f7a67 # v0.0.3
+    permissions:
+      pull-requests: write
+      contents: read
+    with:
+      bazel-docs-verify-target: "--lockfile_mode=error //:docs_check"
+
+  docs-build:
+    name: Build documentation
+    needs:
+      - build
+    uses: eclipse-score/cicd-workflows/.github/workflows/docs.yml@8d80e8df150cae21d53cbc8031d0f970648f7a67 # v0.0.3
+    permissions:
+      contents: read
+    with:
+      # the bazel-target depends on your repo specific docs_targets configuration (e.g. "suffix")
+      bazel-target: "--lockfile_mode=error //:docs -- --github_user=${{ github.repository_owner }} --github_repo=${{ github.event.repository.name }}"
+      retention-days: 3
+      tests-report-artifact: bazel-testlogs-x86_64-linux
+
+  gitlint:
+    name: Check commit messages
+    runs-on: ubuntu-latest
+    if: ${{ github.event_name == 'pull_request' }}
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+      - name: Run Gitlint Action
+        uses: ./.github/actions/gitlint
+        with:
+          pr-number: ${{ github.event.number }}
+          base-branch: ${{ github.event.pull_request.base.ref }}
+
+  ready:
+    name: Ready to merge
+    needs:
+      - common
+      - build
+      - docs-check
+      - docs-build
+      - clippy
+      - coverage
+      - gitlint
+    runs-on: ubuntu-slim
+    permissions: {}
+    if: ${{ !cancelled() && (github.event_name == 'pull_request' || github.event_name == 'merge_group') }}
+    steps:
+      - name: Fail if any required job did not succeed
+        if: contains(needs.*.result, 'failure') || contains(needs.*.result, 'cancelled')
+        run: false

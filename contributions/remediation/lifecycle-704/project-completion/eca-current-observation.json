@@ -1,0 +1,7 @@
+{
+  "url": "https://api.eclipse.org/git/eca/lookup?q=jnascimento6p0",
+  "checked_at_utc": "2026-10-07T14:25:27.600249+00:00",
+  "http_status": 200,
+  "body": "",
+  "scope": "Declared Eclipse account lookup; actual Lifecycle author/committer PR validation still pending"
+}

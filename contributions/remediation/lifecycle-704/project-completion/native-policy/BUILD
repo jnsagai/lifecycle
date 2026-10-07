@@ -1,0 +1,129 @@
+# *******************************************************************************
+# Copyright (c) 2025 Contributors to the Eclipse Foundation
+#
+# See the NOTICE file(s) distributed with this work for additional
+# information regarding copyright ownership.
+#
+# This program and the accompanying materials are made available under the
+# terms of the Apache License Version 2.0 which is available at
+# https://www.apache.org/licenses/LICENSE-2.0
+#
+# SPDX-License-Identifier: Apache-2.0
+# *******************************************************************************
+
+load("@rules_python//python:pip.bzl", "compile_pip_requirements")
+load("@score_docs_as_code//:docs.bzl", "docs")
+load("@score_tooling//:defs.bzl", "copyright_checker", "dash_license_checker", "setup_starpls")
+load("@score_tooling//third_party/format:macros.bzl", "use_format_targets")
+load("//:project_config.bzl", "PROJECT_CONFIG")
+
+# In order to update the requirements, change the `requirements.in` file and run:
+# `bazel run //:requirements.update`.
+# This will update the `requirements_lock.txt` file.
+# To upgrade all dependencies to their latest versions, run:
+# `bazel run //:requirements.update -- --upgrade`.
+compile_pip_requirements(
+    name = "requirements",
+    src = "requirements.in",
+    data = [
+        "//scripts/config_mapping:pip_requirements",
+    ],
+    extra_args = [
+        "--no-annotate",
+    ],
+    requirements_txt = "requirements_lock.txt",
+    tags = [
+        "manual",
+    ],
+)
+
+setup_starpls(
+    name = "starpls_server",
+    visibility = ["//visibility:public"],
+)
+
+copyright_checker(
+    name = "copyright",
+    srcs = [
+        ".github",
+        "BUILD",
+        "MODULE.bazel",
+        "docs",
+        "examples",
+        "externals",
+        "quality",
+        "score",
+        "scripts",
+        "tests",
+    ],
+    config = "@score_tooling//cr_checker/resources:config",
+    exclusion = "//:cr_checker_exclusion",
+    extensions = [
+        "bazel",
+        "BUILD",
+        "bzl",
+        "c",
+        "cpp",
+        "h",
+        "hpp",
+        "ini",
+        "py",
+        "rs",
+        "rst",
+        "sh",
+        "yaml",
+        "yml",
+    ],
+    template = "@score_tooling//cr_checker/resources:templates",
+    visibility = ["//visibility:public"],
+)
+
+# Needed for Dash tool to check python dependency licenses.
+filegroup(
+    name = "cargo_lock",
+    srcs = [
+        "Cargo.lock",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+dash_license_checker(
+    src = "//:cargo_lock",
+    file_type = "",  # let it auto-detect based on project_config
+    project_config = PROJECT_CONFIG,
+    visibility = ["//visibility:public"],
+)
+
+# Add target for formatting checks
+use_format_targets(languages = [
+    "python",
+    "rust",
+    "starlark",
+    "yaml",
+    "cpp",
+])
+
+# Required for code coverage reporting.
+# The coverage reporter locates the workspace root at runtime via //:MODULE.bazel.
+exports_files(["MODULE.bazel"])
+
+# Docs
+docs(
+    bundles = [
+        {
+            "bundle": "//score/launch_manager:docs",
+            "mount_at": "components/launch_manager",
+        },
+        {
+            "bundle": "//score/health_monitor:docs",
+            "mount_at": "components/health_monitor",
+        },
+    ],
+    external_needs = [
+        "@score_platform//:needs_json",  # This allows linking to feature requirements.
+        "@score_process_description//:needs_json",  # This allows linking to requirements (wp__requirements_comp, etc.) from the process_description repository.
+    ],
+    project = "Lifecycle and Health Management",
+    project_url = "https://eclipse-score.github.io/lifecycle/",
+    source_dir = "docs",
+)

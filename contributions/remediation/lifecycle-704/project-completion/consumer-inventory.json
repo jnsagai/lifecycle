@@ -1,0 +1,66 @@
+{
+  "baseline": "f603fe7327b642574332df02a66dd420bd133aea",
+  "commands": [
+    [
+      "git",
+      "grep",
+      "-n",
+      "-E",
+      "mw_com_config|test_lmcontrol_mw_com_config|control_provider_test_mw_com_config",
+      "f603fe7327b642574332df02a66dd420bd133aea",
+      "--",
+      ":(glob)**/*.bzl",
+      ":(glob)**/BUILD",
+      ":(glob)**/BUILD.bazel"
+    ],
+    [
+      "git",
+      "grep",
+      "-n",
+      "-E",
+      "mw_com_config|test_lmcontrol_mw_com_config|control_provider_test_mw_com_config",
+      "--",
+      ":(glob)**/*.bzl",
+      ":(glob)**/BUILD",
+      ":(glob)**/BUILD.bazel"
+    ]
+  ],
+  "baseline_references": [
+    "f603fe7327b642574332df02a66dd420bd133aea:score/launch_manager/src/daemon/src/control/BUILD:36:        \"$(rootpath control_provider_test_mw_com_config.json)\",",
+    "f603fe7327b642574332df02a66dd420bd133aea:score/launch_manager/src/daemon/src/control/BUILD:38:    data = [\"control_provider_test_mw_com_config.json\"],",
+    "f603fe7327b642574332df02a66dd420bd133aea:score/launch_manager/src/lm_control/BUILD:62:        \"$(rootpath src/details/test_lmcontrol_mw_com_config.json)\",",
+    "f603fe7327b642574332df02a66dd420bd133aea:score/launch_manager/src/lm_control/BUILD:64:    data = [\"src/details/test_lmcontrol_mw_com_config.json\"],",
+    "f603fe7327b642574332df02a66dd420bd133aea:tests/utils/bazel/integration.bzl:75:    mw_com_config_pkg_name = \"{}_mw_com_config_pkg\".format(name)",
+    "f603fe7327b642574332df02a66dd420bd133aea:tests/utils/bazel/integration.bzl:99:        name = mw_com_config_pkg_name,",
+    "f603fe7327b642574332df02a66dd420bd133aea:tests/utils/bazel/integration.bzl:100:        srcs = [\"@score_lifecycle//tests/utils/environments:mw_com_config.json\"],",
+    "f603fe7327b642574332df02a66dd420bd133aea:tests/utils/bazel/integration.bzl:105:    pkg_tar(name = test_tar_name, srcs = [\":{}\".format(bin_pkg_name), \":{}\".format(lm_config_pkg_name), \":{}\".format(mw_com_config_pkg_name)])",
+    "f603fe7327b642574332df02a66dd420bd133aea:tests/utils/environments/BUILD:20:    [\"mw_com_config.json\"],"
+  ],
+  "candidate_references": [
+    "config/mw_com_config.bzl:19:\"\"\"Generated mw_com_config.json artifacts for the LmControl service.",
+    "config/mw_com_config.bzl:21:Each supported profile emits the exact mw_com_configuration JSON document that",
+    "config/mw_com_config.bzl:226:def mw_com_config(name, profile, out, **kwargs):",
+    "config/mw_com_config.bzl:227:    \"\"\"Emit the mw_com_configuration JSON document for ``profile`` as ``out``.\"\"\"",
+    "score/launch_manager/src/daemon/src/control/BUILD:14:load(\"//config:mw_com_config.bzl\", \"mw_com_config\")",
+    "score/launch_manager/src/daemon/src/control/BUILD:37:        \"$(rootpath control_provider_test_mw_com_config.json)\",",
+    "score/launch_manager/src/daemon/src/control/BUILD:39:    data = [\"control_provider_test_mw_com_config.json\"],",
+    "score/launch_manager/src/daemon/src/control/BUILD:50:mw_com_config(",
+    "score/launch_manager/src/daemon/src/control/BUILD:51:    name = \"control_provider_test_mw_com_config_gen\",",
+    "score/launch_manager/src/daemon/src/control/BUILD:52:    out = \"control_provider_test_mw_com_config.json\",",
+    "score/launch_manager/src/lm_control/BUILD:14:load(\"//config:mw_com_config.bzl\", \"mw_com_config\")",
+    "score/launch_manager/src/lm_control/BUILD:63:        \"$(rootpath src/details/test_lmcontrol_mw_com_config.json)\",",
+    "score/launch_manager/src/lm_control/BUILD:65:    data = [\"src/details/test_lmcontrol_mw_com_config.json\"],",
+    "score/launch_manager/src/lm_control/BUILD:74:mw_com_config(",
+    "score/launch_manager/src/lm_control/BUILD:75:    name = \"test_lmcontrol_mw_com_config_gen\",",
+    "score/launch_manager/src/lm_control/BUILD:76:    out = \"src/details/test_lmcontrol_mw_com_config.json\",",
+    "tests/utils/bazel/integration.bzl:75:    mw_com_config_pkg_name = \"{}_mw_com_config_pkg\".format(name)",
+    "tests/utils/bazel/integration.bzl:99:        name = mw_com_config_pkg_name,",
+    "tests/utils/bazel/integration.bzl:100:        srcs = [\"@score_lifecycle//tests/utils/environments:mw_com_config.json\"],",
+    "tests/utils/bazel/integration.bzl:105:    pkg_tar(name = test_tar_name, srcs = [\":{}\".format(bin_pkg_name), \":{}\".format(lm_config_pkg_name), \":{}\".format(mw_com_config_pkg_name)])",
+    "tests/utils/environments/BUILD:14:load(\"//config:mw_com_config.bzl\", \"mw_com_config\")",
+    "tests/utils/environments/BUILD:21:mw_com_config(",
+    "tests/utils/environments/BUILD:22:    name = \"mw_com_config_gen\",",
+    "tests/utils/environments/BUILD:23:    out = \"mw_com_config.json\","
+  ],
+  "scope": "Tracked native repository references, including intent-to-add candidate macro; generated outputs and external/dynamic consumers excluded"
+}

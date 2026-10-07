@@ -1,0 +1,17 @@
+{
+  "argv": [
+    "/media/jefferson/11c42dee-73a3-4c2b-ab42-a0440011d9e0/.s-core-build/runs/score-lifecycle704-compliance-1sd3cb6p/tools/project-venv/bin/gitlint",
+    "--config",
+    "/media/jefferson/11c42dee-73a3-4c2b-ab42-a0440011d9e0/worktrees/thinking-caps-compliance/contributions/remediation/lifecycle-704/project-completion/native-policy/score.gitlint",
+    "--msg-filename",
+    "/media/jefferson/11c42dee-73a3-4c2b-ab42-a0440011d9e0/worktrees/thinking-caps-compliance/contributions/remediation/lifecycle-704/project-completion/commit-message.txt"
+  ],
+  "cwd": "/media/jefferson/11c42dee-73a3-4c2b-ab42-a0440011d9e0/.s-core-build/runs/score-lifecycle704-compliance-1sd3cb6p/native",
+  "exit_code": 0,
+  "elapsed_seconds": 2.049110174179077,
+  "started_at_utc_epoch": 1791383051.7930644,
+  "baseline": "f603fe7327b642574332df02a66dd420bd133aea",
+  "candidate_diff_sha256_before": "3cc9ced41cd32678d8e0cdd433881aaf7a8bc0329b2d3153e940cb51a80e4626",
+  "candidate_diff_sha256_after": "3cc9ced41cd32678d8e0cdd433881aaf7a8bc0329b2d3153e940cb51a80e4626",
+  "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

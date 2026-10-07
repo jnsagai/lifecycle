@@ -1,0 +1,10 @@
+refactor: Deduplicate LmControl communication configuration
+
+Generate the provider-test, client-test and integration JSON from shared
+service definitions. Preserve existing labels, runtime values and paths.
+Disclose the recorded AI generation and retain Apache-2.0 profile data.
+Distribute the complete CC0-1.0 terms for the generated portions.
+
+Refs: #704
+Assisted-by: DeepSeek V4 Flash (Fabro; recorded model label)
+Assisted-by: OpenAI Codex (compliance preparation; model revision unavailable)

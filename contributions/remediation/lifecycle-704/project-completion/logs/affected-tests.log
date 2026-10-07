@@ -1,0 +1,117 @@
+$TEST_TMPDIR defined, some defaults will be overridden
+Starting local Bazel server (8.7.0) and connecting to it...
+... still trying to connect to local Bazel server (2629678) after 10 seconds ...
+... still trying to connect to local Bazel server (2629678) after 20 seconds ...
+Computing main repo mapping: 
+Computing main repo mapping: 
+WARNING: For repository 'score_tooling', the root module requires module version score_tooling@2.2.1, but got score_tooling@2.2.2 in the resolved dependency graph. Please update the version in your MODULE.bazel or set --check_direct_dependencies=off
+Computing main repo mapping: 
+Computing main repo mapping: 
+Loading: 
+Loading: 3 packages loaded
+Analyzing: 5 targets (7 packages loaded)
+Analyzing: 5 targets (12 packages loaded, 10 targets configured)
+Analyzing: 5 targets (12 packages loaded, 11 targets configured)
+
+Analyzing: 5 targets (31 packages loaded, 46 targets configured)
+
+Analyzing: 5 targets (45 packages loaded, 46 targets configured)
+
+Analyzing: 5 targets (72 packages loaded, 46 targets configured)
+
+Analyzing: 5 targets (127 packages loaded, 970 targets configured)
+
+Analyzing: 5 targets (174 packages loaded, 4610 targets configured)
+
+Analyzing: 5 targets (247 packages loaded, 7329 targets configured)
+
+Analyzing: 5 targets (306 packages loaded, 13738 targets configured)
+
+Analyzing: 5 targets (338 packages loaded, 14660 targets configured)
+
+Analyzing: 5 targets (361 packages loaded, 20376 targets configured)
+
+Analyzing: 5 targets (396 packages loaded, 21355 targets configured)
+
+WARNING: /media/jefferson/11c42dee-73a3-4c2b-ab42-a0440011d9e0/.s-core-build/runs/score-lifecycle704-compliance-1sd3cb6p/cache/bazel-user/ed4001af69943c1733f9bbc72381c63b/external/score_baselibs+/score/mw/log/detail/text_recorder/BUILD:23:11: in cc_library rule @@score_baselibs+//score/mw/log/detail/text_recorder:text_recorder: target '@@score_baselibs+//score/mw/log/detail/text_recorder:text_recorder' depends on deprecated target '@@score_baselibs+//score/os/utils:high_resolution_steady_clock': Deprecated, please use //platform/aas/mw/time/HighPrecisionLocalSteadyClock instead
+Analyzing: 5 targets (428 packages loaded, 22479 targets configured)
+
+Analyzing: 5 targets (430 packages loaded, 27558 targets configured)
+[1 / 1] no actions running
+INFO: Analyzed 5 targets (430 packages loaded, 27561 targets configured).
+[4 / 883] checking cached actions
+[27 / 2,098] [Prepa] Writing repo mapping manifest for //tests/integration/switch_run_target:switch_run_target
+[32 / 2,254] checking cached actions
+[43 / 2,254] [Prepa] Symlinking virtual headers for //score/launch_manager/src/daemon/src/alive_monitor/details/ifappl:monitor_if_daemon
+[177 / 2,254] [Prepa] Symlinking virtual headers for //score/launch_manager/src/daemon/src/alive_monitor/details/supervision:alive
+[216 / 2,260] checking cached actions
+[225 / 2,272] [Prepa] Symlinking virtual headers for //score/launch_manager/src/daemon/src/common:log
+[252 / 2,272] checking cached actions
+[256 / 2,272] generating Launch Manager config from tests/integration/switch_run_target/switch_run_target.json; 0s linux-sandbox
+[307 / 2,272] generating Launch Manager config from tests/integration/switch_run_target/switch_run_target.json; 1s linux-sandbox
+INFO: From generating Launch Manager config from tests/integration/switch_run_target/switch_run_target.json:
+Schema Validation successful
+[331 / 2,272] checking cached actions
+[364 / 2,272] [Scann] Compiling score/launch_manager/src/lm_control/src/details/lm_control_impl_UT.cpp
+[463 / 2,273] Compiling score/launch_manager/src/lm_control/src/details/lm_control_impl_UT.cpp; 1s linux-sandbox
+[914 / 2,273] Compiling score/launch_manager/src/lm_control/src/details/lm_control_impl_UT.cpp; 8s linux-sandbox ... (2 actions, 1 running)
+[1,103 / 2,273] Compiling score/launch_manager/src/lm_control/src/details/lm_control_impl_UT.cpp; 10s linux-sandbox ... (2 actions running)
+[2,063 / 2,273] Compiling score/launch_manager/src/lm_control/src/details/lm_control_impl_UT.cpp; 26s linux-sandbox ... (2 actions, 1 running)
+[2,128 / 2,273] Linking score/launch_manager/src/lm_control/liblm_control.a; 1s linux-sandbox
+[2,134 / 2,273] Linking score/launch_manager/src/lm_control/liblm_control.a; 2s linux-sandbox ... (2 actions, 1 running)
+[2,159 / 2,273] Linking score/launch_manager/src/lm_control/liblm_control.so; 0s linux-sandbox ... (4 actions running)
+[2,161 / 2,273] Compiling score/launch_manager/src/daemon/src/run.cpp; 3s linux-sandbox ... (3 actions, 2 running)
+[2,163 / 2,273] Compiling score/launch_manager/src/daemon/src/run.cpp; 5s linux-sandbox ... (3 actions running)
+[2,165 / 2,273] Compiling score/launch_manager/src/daemon/src/run.cpp; 6s linux-sandbox ... (4 actions running)
+[2,166 / 2,273] Compiling score/launch_manager/src/daemon/src/run.cpp; 9s linux-sandbox ... (4 actions, 3 running)
+[2,167 / 2,273] Compiling score/launch_manager/src/daemon/src/run.cpp; 11s linux-sandbox ... (4 actions running)
+[2,170 / 2,274] Compiling score/launch_manager/src/daemon/src/run.cpp; 12s linux-sandbox ... (4 actions running)
+[2,172 / 2,274] Compiling score/launch_manager/src/daemon/src/run.cpp; 13s linux-sandbox ... (4 actions running)
+[2,180 / 2,274] Compiling score/launch_manager/src/daemon/src/run.cpp; 15s linux-sandbox ... (4 actions, 3 running)
+[2,180 / 2,274] Compiling score/launch_manager/src/daemon/src/run.cpp; 16s linux-sandbox ... (4 actions running)
+[2,182 / 2,274] Compiling score/launch_manager/src/daemon/src/run.cpp; 17s linux-sandbox ... (4 actions, 3 running)
+[2,184 / 2,274] Compiling score/launch_manager/src/daemon/src/run.cpp; 18s linux-sandbox ... (4 actions, 3 running)
+[2,184 / 2,274] Compiling score/launch_manager/src/daemon/src/run.cpp; 19s linux-sandbox ... (4 actions running)
+[2,188 / 2,274] Compiling score/launch_manager/src/daemon/src/process_group_manager/details/graph.cpp; 3s linux-sandbox
+[2,197 / 2,274] Compiling score/launch_manager/src/daemon/src/process_group_manager/details/graph.cpp; 5s linux-sandbox ... (3 actions, 2 running)
+[2,201 / 2,274] Compiling score/launch_manager/src/daemon/src/process_group_manager/details/graph.cpp; 6s linux-sandbox ... (4 actions running)
+[2,203 / 2,274] Compiling score/launch_manager/src/daemon/src/process_group_manager/details/graph.cpp; 8s linux-sandbox ... (3 actions, 2 running)
+[2,207 / 2,274] Compiling score/launch_manager/src/daemon/src/process_group_manager/details/graph.cpp; 9s linux-sandbox ... (4 actions running)
+[2,208 / 2,274] Compiling score/launch_manager/src/daemon/src/process_group_manager/details/graph.cpp; 11s linux-sandbox ... (4 actions, 3 running)
+[2,219 / 2,274] Compiling score/launch_manager/src/daemon/src/process_group_manager/details/graph.cpp; 12s linux-sandbox ... (4 actions, 3 running)
+[2,219 / 2,274] Compiling score/launch_manager/src/daemon/src/process_group_manager/details/graph.cpp; 14s linux-sandbox ... (4 actions running)
+[2,220 / 2,274] Linking score/launch_manager/src/daemon/src/control/control_provider_UT; 3s linux-sandbox ... (3 actions running)
+[2,221 / 2,274] Linking score/launch_manager/src/daemon/src/control/control_provider_UT; 5s linux-sandbox ... (3 actions running)
+[2,229 / 2,274] Linking score/launch_manager/src/daemon/src/control/control_provider_UT; 9s linux-sandbox ... (3 actions, 2 running)
+[2,230 / 2,274] Linking score/launch_manager/src/daemon/src/control/control_provider_UT; 11s linux-sandbox ... (4 actions running)
+[2,232 / 2,274] Linking score/launch_manager/src/daemon/src/control/control_provider_UT; 13s linux-sandbox ... (2 actions running)
+[2,233 / 2,274] Linking score/launch_manager/src/daemon/src/control/control_provider_UT; 14s linux-sandbox ... (3 actions running)
+[2,241 / 2,274] Linking score/launch_manager/src/daemon/src/control/control_provider_UT; 15s linux-sandbox ... (2 actions running)
+[2,244 / 2,274] Linking score/launch_manager/src/daemon/src/control/control_provider_UT; 16s linux-sandbox ... (4 actions, 3 running)
+[2,247 / 2,275] Compiling score/launch_manager/src/daemon/src/alive_monitor/details/daemon/SupervisionManager.cpp; 16s linux-sandbox ... (4 actions, 3 running)
+[2,254 / 2,275] Compiling score/launch_manager/src/daemon/src/alive_monitor/details/daemon/SupervisionManager.cpp; 17s linux-sandbox ... (4 actions, 3 running)
+[2,258 / 2,276] Compiling score/launch_manager/src/lifecycle_client/src/details/report_running_impl.cpp; 1s linux-sandbox ... (4 actions, 3 running)
+[2,262 / 2,276] Compiling score/launch_manager/src/daemon/src/alive_monitor/details/factory/AliveWorkerFactory.cpp; 2s linux-sandbox ... (4 actions, 2 running)
+[2,265 / 2,276] Testing //score/launch_manager/src/lm_control:lm_control_impl_UT; 2s linux-sandbox ... (4 actions, 3 running)
+[2,265 / 2,276] Testing //score/launch_manager/src/lm_control:lm_control_impl_UT; 4s linux-sandbox ... (4 actions running)
+[2,266 / 2,276] 1 / 5 tests; Linking tests/integration/switch_run_target/control_client_test_driver; 4s linux-sandbox ... (4 actions, 3 running)
+[2,266 / 2,276] 1 / 5 tests; Linking tests/integration/switch_run_target/control_client_test_driver; 10s linux-sandbox ... (4 actions running)
+[2,271 / 2,276] 4 / 5 tests; Linking tests/integration/switch_run_target/component_e; 0s linux-sandbox ... (4 actions, 3 running)
+[2,274 / 2,276] 4 / 5 tests; Linking tests/integration/switch_run_target/component_d; 0s linux-sandbox
+[2,275 / 2,276] 4 / 5 tests; checking cached actions
+[2,275 / 2,276] 4 / 5 tests; [Prepa] Writing: bazel-out/k8-fastbuild/bin/tests/integration/switch_run_target/switch_run_target_test_tar.tar
+[2,276 / 2,277] 4 / 5 tests; Testing //tests/integration/switch_run_target:switch_run_target; 0s linux-sandbox
+[2,276 / 2,277] 5 / 5 tests; Testing //tests/integration/switch_run_target:switch_run_target; 4s linux-sandbox
+[2,277 / 2,277] 5 / 5 tests; no actions running
+INFO: Found 5 test targets...
+INFO: Elapsed time: 186.372s, Critical Path: 52.16s
+INFO: 83 processes: 2196 action cache hit, 14 internal, 69 linux-sandbox.
+INFO: Build completed successfully, 83 total actions
+//score/launch_manager/src/daemon/src/control:control_provider_UT        PASSED in 0.5s
+//score/launch_manager/src/lm_control:ilm_control_UT                     PASSED in 0.4s
+//score/launch_manager/src/lm_control:lm_control_impl_UT                 PASSED in 4.6s
+//scripts/config_mapping/tests:lifecycle_config_tests                    PASSED in 7.1s
+//tests/integration/switch_run_target:switch_run_target                  PASSED in 4.3s
+
+Executed 5 out of 5 tests: 5 tests pass.
+There were tests whose specified size is too big. Use the --test_verbose_timeout_warnings command line option to see which ones these are.

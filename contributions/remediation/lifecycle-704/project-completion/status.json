@@ -1,0 +1,37 @@
+{
+  "id": "eclipse-score/lifecycle#704",
+  "observed_at": "2026-10-07T14:50:37.796808+00:00",
+  "ready_for_official_merge": false,
+  "remaining_gates": [
+    "Author personal DCO confirmation and truthful native sign-off",
+    "Actual submitted-head Eclipse eligibility and complete native CI/platform results or approved dispositions",
+    "Authorized content/impact review, issue-owner acceptance and committer merge decision"
+  ],
+  "human_review": "Advisory assessment prepared; authorized current-head review pending",
+  "ai_assistance": [
+    "DeepSeek V4 Flash (Fabro; recorded model label)",
+    "OpenAI Codex (preparation and verification; model revision unavailable)"
+  ],
+  "artifacts": {
+    "patch": "remediation/lifecycle-704/project-completion/submission.patch",
+    "pr_body": "remediation/lifecycle-704/project-completion/PR-body.md",
+    "pr_title": "remediation/lifecycle-704/project-completion/pr-title.txt",
+    "commit_message_guidance": "remediation/lifecycle-704/project-completion/commit-message.txt",
+    "native_results": "remediation/lifecycle-704/project-completion/native-results.json",
+    "acceptance_and_impact": "remediation/lifecycle-704/project-completion/acceptance-and-impact.md",
+    "ci_matrix": "remediation/lifecycle-704/project-completion/ci-obligations.md",
+    "engineering_review": "remediation/lifecycle-704/project-completion/review.md",
+    "human_disposition": "remediation/lifecycle-704/project-completion/merge-checklist.md",
+    "content_review_request": "remediation/lifecycle-704/project-completion/content-review-request.md",
+    "dco_status": "remediation/lifecycle-704/project-completion/DCO-status.json",
+    "submission_record": "remediation/lifecycle-704/project-completion/submission-record.json",
+    "evidence_manifest": "remediation/lifecycle-704/project-completion/artifact-manifest.json"
+  },
+  "patch_provenance": {
+    "original_path": "issues/eclipse-score/lifecycle/704/imported/fabro/evidence/lifecycle-704-upstream-packet/lifecycle-704.patch",
+    "original_sha256": "c8a33936900b24c13b46298e929d4ef483d0e128d44f9a2cce97909f55702f01",
+    "prepared_sha256": "3cc9ced41cd32678d8e0cdd433881aaf7a8bc0329b2d3153e940cb51a80e4626",
+    "source_diff_unchanged": false,
+    "note": "Macro licence/disclosure comments and complete CC0 distribution terms only; executable macro/BUILD bytes preserved. Current-head affected checks rerun."
+  }
+}

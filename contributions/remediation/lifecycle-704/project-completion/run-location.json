@@ -1,0 +1,7 @@
+{
+  "run_root": "/media/jefferson/11c42dee-73a3-4c2b-ab42-a0440011d9e0/.s-core-build/runs/score-lifecycle704-compliance-1sd3cb6p",
+  "native": "/media/jefferson/11c42dee-73a3-4c2b-ab42-a0440011d9e0/.s-core-build/runs/score-lifecycle704-compliance-1sd3cb6p/native",
+  "baseline": "f603fe7327b642574332df02a66dd420bd133aea",
+  "prepared_patch_sha256": "3cc9ced41cd32678d8e0cdd433881aaf7a8bc0329b2d3153e940cb51a80e4626",
+  "historical_baseline": "7d1d7bec81d96752b5a9a235044d2dfc3ecd259b"
+}

@@ -1,0 +1,6 @@
+{
+  "member": "tests/switch_run_target/etc/mw_com_config.json",
+  "parsed_equal": true,
+  "tar_sha256": "de82cb09880e77134c538b318ac48ff669a34f856ee9f0960d60338dcd7c1741",
+  "member_sha256": "30aeea61f37cb73f4fb1707c79a25b6afe57b602f86191dd4520c4d4c3f224f9"
+}
