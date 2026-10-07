@@ -24,3 +24,11 @@ python3 contributions/remediation/lifecycle-704/project-completion/verify_packet
 ```
 
 Assisted-by: OpenAI Codex (evidence publication preparation)
+
+## Code-header assurance
+
+[The 2026-10-07 header audit](header-audit-20261007/README.md) checks all current
+nonempty native code and code added in this evidence packet. Supporting Python
+and shell helper headers are complete; their executable bodies are unchanged.
+Original snapshots remain in the prior evidence commit. The native PR source
+head and runtime measurements are unchanged.

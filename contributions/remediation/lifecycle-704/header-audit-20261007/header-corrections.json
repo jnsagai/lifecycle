@@ -1,0 +1,57 @@
+{
+  "observed_at": "2026-10-07T17:08:45.027309+00:00",
+  "native_source_head": "0f63daeb489ad107f41143303f19fb9484c58392",
+  "prior_evidence_head": "023d1f0ce1e155309f65a87c30ae6ebf1a5f2340",
+  "native_source_modified": false,
+  "header_corrections": [
+    {
+      "path": "project-completion/verify_packet.py",
+      "before_sha256": "618d73625332425f7490467884d286c7f368302e9ba07787434b89f47cf3005e",
+      "after_sha256": "b632e10b443ab26efdd6b4dc11c19aa2a7a7a0a18f82a8b878c440c18da13bb6",
+      "body_comparison": "Python AST unchanged"
+    },
+    {
+      "path": "project-completion/verification-scripts/collect.py",
+      "before_sha256": "2fe18306398aca1c69f48c32317ce691311414fe382c5549a03355172f8dfea7",
+      "after_sha256": "b2557a4783ac6e880dbceca975a7edc5ea2c1a9648404390abc74df02002f660",
+      "body_comparison": "Python AST unchanged"
+    },
+    {
+      "path": "project-completion/verification-scripts/finalize.py",
+      "before_sha256": "5635de7762f368c405e2e1f394530135e15f1882a6a630254f011f1fed33f8e5",
+      "after_sha256": "8fb614253c01a73691378c18b18b9d896539ad90716146eff661897098967e10",
+      "body_comparison": "Python AST unchanged"
+    },
+    {
+      "path": "project-completion/verification-scripts/run_check.py",
+      "before_sha256": "952c617970b3c22758142cc0e0e734661876bd2ce180b8362bcc5339f3b8b369",
+      "after_sha256": "06f789ad0326ab83e662a3d60229e28cc47156653376d9e994bd5296e936b36a",
+      "body_comparison": "Python AST unchanged"
+    },
+    {
+      "path": "project-completion/verification-scripts/bazel-resource-wrapper.sh",
+      "before_sha256": "7657e1760c95aa7d08427a11ee1210cef1e0576de7767e98c41c0cb4a8cc54a1",
+      "after_sha256": "eddbc9d9dba4b36c3b6206c9e79501c7d904a4e7e6a54d7b1ebf3a1634c8ec87",
+      "body_comparison": "Shell executable body byte-identical"
+    },
+    {
+      "path": "publication/verify_publication.py",
+      "before_sha256": "1c10b885a851f2231190e47fc564b91c3459f6035910ade0e288404781074a1d",
+      "after_sha256": "99bb9fea676173ad2914331c81b66b1a59473a2178a65dd886f04b9f54545355",
+      "body_comparison": "Python AST unchanged"
+    }
+  ],
+  "prior_sealed_packets": [
+    {
+      "path": "history/project-completion-before-header-audit-20261007.tar.gz",
+      "sha256": "55e4e827a7039d19e1cba091531e99f4234a10d9a19064272fa526d67173ba03",
+      "prior_manifest_files": 106
+    },
+    {
+      "path": "history/publication-before-header-audit-20261007.tar.gz",
+      "sha256": "38d4494ec5af0c2751a9a3c175eaa3f78727cd7bcdab35e56e040bfdd9940ef4",
+      "prior_manifest_files": 22
+    }
+  ],
+  "scope": "Current native code and contribution/evidence helper code; historical sealed bytes retained in archives and original evidence commit"
+}
