@@ -1,14 +1,24 @@
-# Lifecycle #704 — complete code-header audit
+# Lifecycle #704 — contribution headers and upstream audit
 
 Native PR: [#762](https://github.com/eclipse-score/lifecycle/pull/762), source head
 `0f63daeb489ad107f41143303f19fb9484c58392`. It remains Draft until the author's ready-for-review instruction.
 
-Checked **485 nonempty tracked native code files**, including all **four code
-files changed by the PR**, and **24 code files added on the evidence branch**.
-The local publication verifier is checked too. Every current nonempty code file
-in these scopes has copyright, NOTICE ownership reference, readable Apache terms,
-license URL and an appropriate SPDX expression. The AI-generated helpers and
-macro also retain CC0 disclosure and assistance attribution.
+All **four code files changed by PR #762** have complete project headers. All
+**24 code files added on the evidence branch** and the local publication verifier
+also have the required fields after the helper corrections. These scopes have
+copyright, NOTICE ownership reference, readable Apache terms, license URL and
+an appropriate SPDX expression. AI-generated helpers and the macro retain CC0
+disclosure and assistance attribution.
+
+The broader upstream audit checked **485 nonempty files in the default source
+set**, plus **25 additional source/build configuration files**, including CodeQL,
+FlatBuffers, Docker, Bazel configuration, TOML and the extensionless shell tool.
+It found **seven inherited source files and nine inherited configuration files
+without headers** (listed individually in `header-audit.json`). Those paths are
+unchanged by PR #762. This audit does not certify all upstream code as compliant.
+The initial evidence revision's broad wording is superseded by this inventory.
+The author's scope question is pending; default preparation retains the issue
+PR's scope and records these existing gaps separately.
 
 The inherited empty `scripts/BUILD` has no content and is exempted by the native
 checker. JSON measurements/configurations and verbatim licence terms are data;

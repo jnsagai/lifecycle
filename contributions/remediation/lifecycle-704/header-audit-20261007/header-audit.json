@@ -1,5 +1,5 @@
 {
-  "observed_at": "2026-10-07T17:09:40.981945+00:00",
+  "observed_at": "2026-10-07T17:20:58.049855+00:00",
   "native_head": "0f63daeb489ad107f41143303f19fb9484c58392",
   "native_tracked_code_files": 486,
   "native_nonempty_code_files_checked": 485,
@@ -6645,5 +6645,377 @@
     "log_sha256": "6a996499a67269b88b170c68899c994f3f397656277b03af27bb9fc6321bcee6",
     "warning_note": "The native Apache-only template reports a format warning for the disclosed Apache-2.0 AND CC0-1.0 generator. The required legal header fields and combined SPDX expression are checked independently; no warnings or disclosures are suppressed."
   },
-  "scope": "All nonempty tracked native code plus all code added on the evidence branch and the local publication verifier. JSON artifacts and verbatim licence texts are data, not code headers."
+  "scope": "All four code files changed in PR #762, all 24 evidence code files, local publication verifier, 485 default native-code paths and 25 additional source/build configuration paths. Existing upstream omissions are listed separately.",
+  "additional_native_files": [
+    {
+      "path": ".bazelrc",
+      "sha256": "4810f663106303c9fde5469bd35150358576bc283535ee922340cbbeb0370bec",
+      "spdx": "Apache-2.0",
+      "required_header_fields": {
+        "copyright": true,
+        "notice_reference": true,
+        "human_license_terms": true,
+        "license_uri": true,
+        "spdx": true
+      },
+      "origin": "Inherited upstream; unchanged by PR #762",
+      "kind": "build/configuration"
+    },
+    {
+      "path": ".devcontainer/Dockerfile",
+      "sha256": "41203e23a1f4caf062e748b4f9571f4dea7af3899e5f65966661209ade1dc925",
+      "spdx": "Apache-2.0",
+      "required_header_fields": {
+        "copyright": true,
+        "notice_reference": true,
+        "human_license_terms": true,
+        "license_uri": true,
+        "spdx": true
+      },
+      "origin": "Inherited upstream; unchanged by PR #762",
+      "kind": "build/configuration"
+    },
+    {
+      "path": ".devcontainer/run-tool",
+      "sha256": "6a63ad7860d6180f1e3077ba1410afa25e76afd2312de700b764ce3c8d984907",
+      "spdx": "Apache-2.0",
+      "required_header_fields": {
+        "copyright": true,
+        "notice_reference": true,
+        "human_license_terms": true,
+        "license_uri": true,
+        "spdx": true
+      },
+      "origin": "Inherited upstream; unchanged by PR #762",
+      "kind": "build/configuration"
+    },
+    {
+      "path": "Cargo.toml",
+      "sha256": "5211605badf7b1bb79b32cb52e0f394a678d0416189ca564a13c9f4d2b2281f3",
+      "spdx": null,
+      "required_header_fields": {
+        "copyright": false,
+        "notice_reference": false,
+        "human_license_terms": false,
+        "license_uri": false,
+        "spdx": false
+      },
+      "origin": "Inherited upstream; unchanged by PR #762",
+      "kind": "build/configuration"
+    },
+    {
+      "path": "examples/rust_supervised_app/Cargo.toml",
+      "sha256": "e0ec9751af4cf9690a447e3ece3407638902fd3961a772db1aaf6879ae49b1d7",
+      "spdx": null,
+      "required_header_fields": {
+        "copyright": false,
+        "notice_reference": false,
+        "human_license_terms": false,
+        "license_uri": false,
+        "spdx": false
+      },
+      "origin": "Inherited upstream; unchanged by PR #762",
+      "kind": "build/configuration"
+    },
+    {
+      "path": "externals/codeql/code_complexity/code-complexity-queries/FileLinesOfCode.ql",
+      "sha256": "7315fb91011a937ee52b06b30300285638f6a3c46d79a1eaf3f37b6489a6ea41",
+      "spdx": null,
+      "required_header_fields": {
+        "copyright": false,
+        "notice_reference": false,
+        "human_license_terms": false,
+        "license_uri": false,
+        "spdx": false
+      },
+      "origin": "Inherited upstream; unchanged by PR #762",
+      "kind": "source"
+    },
+    {
+      "path": "externals/codeql/code_complexity/code-complexity-queries/FunctionComplexity.ql",
+      "sha256": "0e1b21bcaae7ef77eb64dac1cac625f67c29005a441e9cc61ac41af3071ee367",
+      "spdx": null,
+      "required_header_fields": {
+        "copyright": false,
+        "notice_reference": false,
+        "human_license_terms": false,
+        "license_uri": false,
+        "spdx": false
+      },
+      "origin": "Inherited upstream; unchanged by PR #762",
+      "kind": "source"
+    },
+    {
+      "path": "externals/codeql/code_complexity/code-complexity-queries/FunctionLinesOfCode.ql",
+      "sha256": "baf07b611afcfdae247e1ccfa0e2ba3b859ce173970d569cc7646cf6bf06647d",
+      "spdx": null,
+      "required_header_fields": {
+        "copyright": false,
+        "notice_reference": false,
+        "human_license_terms": false,
+        "license_uri": false,
+        "spdx": false
+      },
+      "origin": "Inherited upstream; unchanged by PR #762",
+      "kind": "source"
+    },
+    {
+      "path": "externals/codeql/code_complexity/code-complexity-queries/FunctionNumberOfParameters.ql",
+      "sha256": "167963b19cd3fc0108c07e212ce80055a40ab571ac985505efc20560a08b01ec",
+      "spdx": null,
+      "required_header_fields": {
+        "copyright": false,
+        "notice_reference": false,
+        "human_license_terms": false,
+        "license_uri": false,
+        "spdx": false
+      },
+      "origin": "Inherited upstream; unchanged by PR #762",
+      "kind": "source"
+    },
+    {
+      "path": "externals/codeql/code_complexity/code-complexity-queries/GotoStatements.ql",
+      "sha256": "0058c52c031345d2cb58e247a1b79a870855f1a385c5446c60a10f82046cf70b",
+      "spdx": null,
+      "required_header_fields": {
+        "copyright": false,
+        "notice_reference": false,
+        "human_license_terms": false,
+        "license_uri": false,
+        "spdx": false
+      },
+      "origin": "Inherited upstream; unchanged by PR #762",
+      "kind": "source"
+    },
+    {
+      "path": "externals/codeql/code_complexity/code-complexity-queries/RecursivePaths.ql",
+      "sha256": "8b0a25563a391b83ab9d0cbef584d0d0aafa43e9aa885c12820e5e441f88f20d",
+      "spdx": null,
+      "required_header_fields": {
+        "copyright": false,
+        "notice_reference": false,
+        "human_license_terms": false,
+        "license_uri": false,
+        "spdx": false
+      },
+      "origin": "Inherited upstream; unchanged by PR #762",
+      "kind": "source"
+    },
+    {
+      "path": "externals/codeql/code_complexity/suites/thresholds.qls",
+      "sha256": "d81fb8302e24a2d633a61b2ecdaa99e02e891693fa735379f8feaf492c3aca2b",
+      "spdx": null,
+      "required_header_fields": {
+        "copyright": false,
+        "notice_reference": false,
+        "human_license_terms": false,
+        "license_uri": false,
+        "spdx": false
+      },
+      "origin": "Inherited upstream; unchanged by PR #762",
+      "kind": "build/configuration"
+    },
+    {
+      "path": "pyproject.toml",
+      "sha256": "43efeb435f0ca68700d4e844aa89ccebad16197f9286fa9b49f89ed5d2d69a43",
+      "spdx": null,
+      "required_header_fields": {
+        "copyright": false,
+        "notice_reference": false,
+        "human_license_terms": false,
+        "license_uri": false,
+        "spdx": false
+      },
+      "origin": "Inherited upstream; unchanged by PR #762",
+      "kind": "build/configuration"
+    },
+    {
+      "path": "quality/coverage/coverage.bazelrc",
+      "sha256": "be593a3ec783144a398e8062946b16644372ac7f22c55e68acb642042142bb18",
+      "spdx": "Apache-2.0",
+      "required_header_fields": {
+        "copyright": true,
+        "notice_reference": true,
+        "human_license_terms": true,
+        "license_uri": true,
+        "spdx": true
+      },
+      "origin": "Inherited upstream; unchanged by PR #762",
+      "kind": "build/configuration"
+    },
+    {
+      "path": "quality/sanitizer/sanitizer.bazelrc",
+      "sha256": "f18d7b0da57fabeb6c25c67b6826be2d811c893341f1ddfdf2d6c31beb10f67f",
+      "spdx": "Apache-2.0",
+      "required_header_fields": {
+        "copyright": true,
+        "notice_reference": true,
+        "human_license_terms": true,
+        "license_uri": true,
+        "spdx": true
+      },
+      "origin": "Inherited upstream; unchanged by PR #762",
+      "kind": "build/configuration"
+    },
+    {
+      "path": "quality/static_analysis/static_analysis.bazelrc",
+      "sha256": "2d6291f55a9bbd74e21a6b571e43dbc77bb553d7e78d9ace5dc0bfe71db81ab3",
+      "spdx": "Apache-2.0",
+      "required_header_fields": {
+        "copyright": true,
+        "notice_reference": true,
+        "human_license_terms": true,
+        "license_uri": true,
+        "spdx": true
+      },
+      "origin": "Inherited upstream; unchanged by PR #762",
+      "kind": "build/configuration"
+    },
+    {
+      "path": "rust-toolchain.toml",
+      "sha256": "a7aa447d445819fe24bf64e0b78382120f88895c8e60aaf10da4cef803da9732",
+      "spdx": null,
+      "required_header_fields": {
+        "copyright": false,
+        "notice_reference": false,
+        "human_license_terms": false,
+        "license_uri": false,
+        "spdx": false
+      },
+      "origin": "Inherited upstream; unchanged by PR #762",
+      "kind": "build/configuration"
+    },
+    {
+      "path": "rustfmt.toml",
+      "sha256": "1439dc6f5e0793d072901697ef22961630e4cf643677e52ef393d07dd6381344",
+      "spdx": null,
+      "required_header_fields": {
+        "copyright": false,
+        "notice_reference": false,
+        "human_license_terms": false,
+        "license_uri": false,
+        "spdx": false
+      },
+      "origin": "Inherited upstream; unchanged by PR #762",
+      "kind": "build/configuration"
+    },
+    {
+      "path": "score.bazelrc/score_toolchain.bazelrc",
+      "sha256": "bdbdbb55f46cfbb5c16dad6bf31baf127d4f53f06c6d5e2a09972f2442acdcfe",
+      "spdx": "Apache-2.0",
+      "required_header_fields": {
+        "copyright": true,
+        "notice_reference": true,
+        "human_license_terms": true,
+        "license_uri": true,
+        "spdx": true
+      },
+      "origin": "Inherited upstream; unchanged by PR #762",
+      "kind": "build/configuration"
+    },
+    {
+      "path": "score/health_monitor/src/Cargo.toml",
+      "sha256": "09188bff1652573c90264f7dbe00c9b6476195a0b57bee1b049aa85b2ea684ec",
+      "spdx": null,
+      "required_header_fields": {
+        "copyright": false,
+        "notice_reference": false,
+        "human_license_terms": false,
+        "license_uri": false,
+        "spdx": false
+      },
+      "origin": "Inherited upstream; unchanged by PR #762",
+      "kind": "build/configuration"
+    },
+    {
+      "path": "score/launch_manager/src/alive/src/rust/Cargo.toml",
+      "sha256": "2997bf00bdabae9e7d20443be0d9dc3ebe9dea4d56d99ae839071089391bdae0",
+      "spdx": null,
+      "required_header_fields": {
+        "copyright": false,
+        "notice_reference": false,
+        "human_license_terms": false,
+        "license_uri": false,
+        "spdx": false
+      },
+      "origin": "Inherited upstream; unchanged by PR #762",
+      "kind": "build/configuration"
+    },
+    {
+      "path": "score/launch_manager/src/daemon/src/configuration/details/lm_flatcfg.fbs",
+      "sha256": "0a9b9693d90afe2fa7deb17f8f71530db2cb98a59e66bdf19bffe0e5439b8462",
+      "spdx": null,
+      "required_header_fields": {
+        "copyright": false,
+        "notice_reference": false,
+        "human_license_terms": false,
+        "license_uri": false,
+        "spdx": false
+      },
+      "origin": "Inherited upstream; unchanged by PR #762",
+      "kind": "source"
+    },
+    {
+      "path": "score/launch_manager/src/lifecycle_client/src/rust/Cargo.toml",
+      "sha256": "6e627f04b04393d5c3807b769ac3e4047d06f9b3d9cb9fb715c3a1201c16a126",
+      "spdx": null,
+      "required_header_fields": {
+        "copyright": false,
+        "notice_reference": false,
+        "human_license_terms": false,
+        "license_uri": false,
+        "spdx": false
+      },
+      "origin": "Inherited upstream; unchanged by PR #762",
+      "kind": "build/configuration"
+    },
+    {
+      "path": "tests/utils/environments/arm64-qnx/init.build",
+      "sha256": "10dd03b624bee139ed45ad2fde1bd172f4f0e2566872976a383bd83b16586877",
+      "spdx": "Apache-2.0",
+      "required_header_fields": {
+        "copyright": true,
+        "notice_reference": true,
+        "human_license_terms": true,
+        "license_uri": true,
+        "spdx": true
+      },
+      "origin": "Inherited upstream; unchanged by PR #762",
+      "kind": "build/configuration"
+    },
+    {
+      "path": "tests/utils/environments/x86_64-qnx/init.build",
+      "sha256": "19b0086aa66b17fa089cf1b2a2a010754ce04e8df9744521c9c5a0e1fa536578",
+      "spdx": "Apache-2.0",
+      "required_header_fields": {
+        "copyright": true,
+        "notice_reference": true,
+        "human_license_terms": true,
+        "license_uri": true,
+        "spdx": true
+      },
+      "origin": "Inherited upstream; unchanged by PR #762",
+      "kind": "build/configuration"
+    }
+  ],
+  "additional_native_files_checked": 25,
+  "additional_upstream_files_missing_headers": [
+    "Cargo.toml",
+    "examples/rust_supervised_app/Cargo.toml",
+    "externals/codeql/code_complexity/code-complexity-queries/FileLinesOfCode.ql",
+    "externals/codeql/code_complexity/code-complexity-queries/FunctionComplexity.ql",
+    "externals/codeql/code_complexity/code-complexity-queries/FunctionLinesOfCode.ql",
+    "externals/codeql/code_complexity/code-complexity-queries/FunctionNumberOfParameters.ql",
+    "externals/codeql/code_complexity/code-complexity-queries/GotoStatements.ql",
+    "externals/codeql/code_complexity/code-complexity-queries/RecursivePaths.ql",
+    "externals/codeql/code_complexity/suites/thresholds.qls",
+    "pyproject.toml",
+    "rust-toolchain.toml",
+    "rustfmt.toml",
+    "score/health_monitor/src/Cargo.toml",
+    "score/launch_manager/src/alive/src/rust/Cargo.toml",
+    "score/launch_manager/src/daemon/src/configuration/details/lm_flatcfg.fbs",
+    "score/launch_manager/src/lifecycle_client/src/rust/Cargo.toml"
+  ],
+  "initial_inventory_scope": "485 nonempty files matching the native checker extensions plus evidence helpers; not a claim that every upstream file has a header."
 }
